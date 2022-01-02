@@ -7,7 +7,8 @@ Steps for reproducing OONF (https://github.com/OLSR/OONF) build [1] in debian 11
 # Commands
 
     sudo docker build -t build-oonf .
-    DIR=/tmp/oonf-build/share/
+    DIR=/tmp/oonf-build-share/
+    mkdir $DIR
     sudo docker run --detach=false --rm -v $DIR:/oonf/mount build-oonf
 
 All .deb files are now in $DIR of the docker host.
